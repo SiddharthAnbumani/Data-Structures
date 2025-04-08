@@ -19,18 +19,6 @@ class BinarySearchTree:
             return current
         self.root = _insert(self.root,data)
     
-    def search(self,target):
-        def _search(current,target):
-            if not current:
-                return None
-            if target == current.data:
-                return current
-            if target < current.data:
-                return _search(current.left,target)
-            else:
-                return _search(current.right,target)
-        return _search(self.root,target)
-    
     def delete(self,target):
         def _delete(current,target):
             if not current:
@@ -56,4 +44,55 @@ class BinarySearchTree:
                 current.right = _delete(current.right,successor.data)
             return current
         self.root = _delete(self.root,target)
-                
+
+    def search(self,target):
+        def _search(current,target):
+            if not current:
+                return None
+            if target == current.data:
+                return current
+            if target < current.data:
+                return _search(current.left,target)
+            else:
+                return _search(current.right,target)
+        return _search(self.root,target)
+    
+    # TREE TRAVERSALS
+
+    def preorder(self):
+        def _preorder(current):
+            if current:
+                print(current.data,end='')
+                _preorder(current.left)
+                _preorder(current.right)
+        _preorder(self.root)
+
+    def inorder(self):
+        def _inorder(current):
+            if current:
+                _inorder(current.left)
+                print(current.data,end='')
+                _inorder(current.right)
+        _inorder(self.root)
+
+    def postorder(self):
+        def _postorder(current):
+            if current:
+                _postorder(current.left)
+                _postorder(current.right)
+                print(current.data,end='')
+        _postorder(self.root)
+
+    def level_order(self):
+        if not self.root:
+            return None
+        queue = []
+        queue.append(self.root)
+        while queue:
+            current = queue.pop(0)
+            print(current.data,end='')
+        if current.left:
+            queue.append(current.left)
+        if current.right:
+            queue.append(current.right)
+        

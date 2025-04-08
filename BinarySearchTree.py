@@ -18,3 +18,15 @@ class BinarySearchTree:
                 current.right = _insert(current.right,data)
             return current
         self.root = _insert(self.root,data)
+    
+    def search(self,target):
+        def _search(current,target):
+            if not current:
+                return None
+            if target == current.data:
+                return current
+            if target < current.data:
+                return _search(current.left,target)
+            else:
+                return _search(current.right,target)
+        return _search(self.root,target)

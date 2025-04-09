@@ -12,7 +12,8 @@ Stacks
 
 Queues
 1 - simple Queue #
-2 - circular Queue
+2 - circular Queue #
 
 Tree 
-1 - Binary Tree
+1 - Binary Tree #
+2 - Binary Search Tree #

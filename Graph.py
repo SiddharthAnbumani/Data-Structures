@@ -10,7 +10,7 @@ class Graph:
         if v1 in self.adj_list and v2 in self.adj_list:
                 self.adj_list[v1].append(v2)
                 self.adj_list[v2].append(v1) # Only for Undirected Graph
-                
+
     def displayGraph(self):
         if not self.adj_list :
              print("The Graph is empty")
@@ -27,4 +27,16 @@ class Graph:
         for neighbor in self.adj_list[start_node]:
              if neighbor not in visited:
                   self.depthFirstSearch(neighbor,visited)
-    
+
+    def breadthFirstSearch(self,start_node):
+         visited = set()
+         queue = []
+         visited.add(start_node)
+         queue.append(start_node)
+         while queue:
+            current = queue.pop(0)
+            print(current,'->',end='')
+            for neighbor in self.adj_list[current]:
+                 if neighbor not in visited:
+                      visited.add(neighbor)
+                      queue.append(neighbor)

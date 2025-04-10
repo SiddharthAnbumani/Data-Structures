@@ -1,30 +1,20 @@
-class Graph:
-    def __init__(self):
-        self.adj_list = {}
-    def addVertex(self,vertex):
-        if vertex not in self.adj_list:
-            self.adj_list[vertex] = []
-    def addEdges(self,v1,v2):
-        if v1 in self.adj_list and v2 in self.adj_list:
-            self.adj_list[v1].append(v2)
-            self.adj_list[v2].append(v1) # Only for undirected Graph
-    def depthFirstSearch(self,start_node,visited=None):
-        if visited is None:
-            visited = set()
-        print(start_node,'->',end = '')
-        visited.add(start_node)
-        for neighbor in self.adj_list[start_node]:
-            if neighbor not in visited:
-                self.depthFirstSearch(neighbor,visited)
-    def breadthFirstSearch(self,start_node):
-        visited = set()
-        queue = []
-        visited.add(start_node)
-        queue.append(start_node)
-        while queue:
-            current = queue.pop(0)
-            print(current,'->',end=' ')
-            for neighbor in self.adj_list[current]:
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    queue.append(neighbor)
+""" 
+IMPLEMENTATION OF STACK
+
+Implementation of stack can be done using a linked listed and an Array
+
+Stack Operations are are.
+Push -> Add elements in the top 
+Pop -> Deletes elements from the Top 
+Peek -> returns the top most element
+Display -> Prints the entire stack
+
+
+Implementation using a Linked List.
+
+Push -> add elements in the top
+Pop -> Deleted elements at the top 
+Peek -> returns the first node in the list
+Display -> Traverse the Linked List 
+
+"""

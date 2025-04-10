@@ -30,7 +30,7 @@ class Stack:
             self.head = new_node
             return
         new_node.next = self.head 
-        self.head = new_node 
+        self.head = new_node
     def pop(self):
         if self.head is None:
             print('The stack is empty')

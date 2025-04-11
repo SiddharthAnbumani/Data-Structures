@@ -30,3 +30,9 @@ def fibonacci(n):
     if n == 1:
         return 1
     return fibonacci(n-1) + fibonacci(n-2)
+
+# Sum of digits
+def sum_of_digit(n):
+    if n == 0:
+        return 0
+    return (n % 10) + sum_of_digit(n // 10)

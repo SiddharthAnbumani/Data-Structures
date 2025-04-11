@@ -36,3 +36,10 @@ def sum_of_digit(n):
     if n == 0:
         return 0
     return (n % 10) + sum_of_digit(n // 10)
+
+def recIsPalindrome(s):
+    if len(s) <= 1:
+        return True
+    if s[0] != s[-1]:
+        return False
+    return recIsPalindrome(s[1:-1])

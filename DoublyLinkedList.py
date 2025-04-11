@@ -36,6 +36,15 @@ class DoublyLinkedList:
         if self.head:
             self.head.prev = None
 
+    def delete_at_end(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        temp = self.head
+        while temp.next.next:
+            temp = temp.next
+        
+
     def traverse(self):
         if self.head is None:
             print("the List is empty.")

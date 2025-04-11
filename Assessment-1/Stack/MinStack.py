@@ -3,9 +3,7 @@ MinStack is a stack that performs all regular stack operations and also
 allows constant-time access to the minimum value present in the stack.
 """
 
-
 class MinStack:
-
     def __init__(self):
        self.stack = []
        self.minStack = []

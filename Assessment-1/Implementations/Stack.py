@@ -26,3 +26,31 @@ class StackWithLinkedList:
             print(temp.data, '->',end=' ')
             temp = temp.next
         print(None)
+
+class StackWithList:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, data):
+        self.stack.append(data)
+
+    def pop(self):
+        if not self.stack:
+            print("Stack is empty")
+            return
+        return self.stack.pop()
+
+    def peek(self):
+        if not self.stack:
+            print("Stack is empty")
+            return
+        return self.stack[-1]
+
+    def display(self):
+        if not self.stack:
+            print("Stack is empty")
+            return
+        print("Top ->", end=" ")
+        for item in reversed(self.stack):
+            print(item, "->", end=" ")
+        print("None")

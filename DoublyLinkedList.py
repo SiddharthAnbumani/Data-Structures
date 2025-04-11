@@ -28,6 +28,14 @@ class DoublyLinkedList:
         temp.next = new_node
         new_node.self.prev = temp
 
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        self.head = self.head.next
+        if self.head:
+            self.head.prev = None
+
     def traverse(self):
         if self.head is None:
             print("the List is empty.")

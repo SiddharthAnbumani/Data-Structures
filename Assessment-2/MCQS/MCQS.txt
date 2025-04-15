@@ -1,0 +1,34 @@
+LINKED LIST - Time Complexity
+
+INSERTION OPERATIONS
+Insertion at the Beginning: O(1)
+Insertion at the End (without tail pointer): O(n)
+Insertion at the End (with tail pointer): O(1)
+Insertion at a Specific Position: O(n)
+
+DELETION OPERATIONS
+Deletion at the Beginning (Head): O(1)
+Deletion at the End (Tail): O(n) (without tail pointer)
+Deletion at the End (Tail): O(1) (with tail pointer, but still requires traversal for the second-to-last node)
+Deletion at a Specific Position: O(n)
+Deletion of a Specific Node (Given a Pointer): O(1)
+
+SEARCH AND TRAVERSAL OPERATIONS
+Search - O(n)
+Traveral - O(n)
+
+STACK - Time Complexity
+
+push - O(1)
+pop - O(1)
+peek - O(1)
+is_empty - O(1)
+
+
+QUEUE - Time Complexity
+
+enqueue - O(1)
+dequeue - O(1)
+peek - O(1)
+is_empty - O(1)
+size - O(1) 
